@@ -10,7 +10,7 @@ export const COLOMBIA_PRODUCTS = [
     version: "Local", // ← cambia a "Visitante" cuando quieras
     emoji: "🏅",
     gradient: "linear-gradient(135deg,#f9d923,#f0a500)",
-    photos: ["/images/MenPlayer/1.jpeg", "/images/MenPlayer/2.jpg", "/images/MenPlayer/3.jpg", "/images/MenPlayer/4.jpg", "/images/MenPlayer/5.jpeg"], 
+    photos: ["/images/Colombia/MenPlayer/1.jpeg", "/images/Colombia/MenPlayer/2.jpg", "/images/Colombia/MenPlayer/3.jpg", "/images/Colombia/MenPlayer/4.jpg", "/images/Colombia/MenPlayer/5.jpeg"], 
   },
   {
     slug: "colombia-fan-hombre",
@@ -23,7 +23,7 @@ export const COLOMBIA_PRODUCTS = [
     version: "Local",
     emoji: "⭐",
     gradient: "linear-gradient(135deg,#003893,#0054d1)",
-    photos: [],
+    photos: ["images/Colombia/MenFan/1.jpeg", "images/Colombia/MenFan/2.jpg", "images/Colombia/MenFan/3.jpg", "images/Colombia/MenFan/4.jpg", "images/Colombia/MenFan/5.jpg"],
   },
   {
     slug: "colombia-jugador-mujer",
@@ -36,7 +36,7 @@ export const COLOMBIA_PRODUCTS = [
     version: "Local",
     emoji: "🌟",
     gradient: "linear-gradient(135deg,#f9d923,#e8b800)",
-    photos: ["/images/WomenPlayer/5.jpg", "/images/WomenPlayer/2.jpg", "/images/WomenPlayer/3.jpg", "/images/WomenPlayer/4.jpg"],
+    photos: ["/images/Colombia/WomenPlayer/5.jpg", "/images/Colombia/WomenPlayer/2.jpg", "/images/Colombia/WomenPlayer/3.jpg", "/images/Colombia/WomenPlayer/4.jpg"],
   },
   {
     slug: "colombia-fan-mujer",
@@ -45,11 +45,11 @@ export const COLOMBIA_PRODUCTS = [
     price: 75000,
     badges: [{ label: "FAN", color: "#c8102e" }, { label: "MUJER", color: "#9b2c6b" }],
     desc: "Fan Edition para mujer. Disponible en corte regular y crop fit. Cómoda y estilosa.",
-    sizes: ["XS", "S", "M", "L", "XL"],
-    version: "Visitante",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    version: "Local",
     emoji: "💛",
     gradient: "linear-gradient(135deg,#c8102e,#e8374a)",
-    photos: [],
+    photos: ["images/Colombia/WomenFan/1.jpg", "images/Colombia/WomenFan/2.jpg", "images/Colombia/WomenFan/3.jpg", "images/Colombia/WomenFan/4.jpg","images/Colombia/WomenFan/5.jpg"],
   },
   {
     slug: "colombia-nino",
@@ -62,6 +62,6 @@ export const COLOMBIA_PRODUCTS = [
     version: "Local",
     emoji: "⚽",
     gradient: "linear-gradient(135deg,#f9d923,#003893)",
-    photos: [],
+    photos: ["/images/Colombia/Kid/1.jpg","/images/Colombia/Kid/2.jpg","/images/Colombia/Kid/3.jpg","/images/Colombia/Kid/4.jpg","/images/Colombia/Kid/5.jpg"],
   },
 ];

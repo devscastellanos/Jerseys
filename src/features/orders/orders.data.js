@@ -4,21 +4,15 @@ export const CUSTOM_CATEGORIES = [
   {
     id: "selecciones", label: "Selecciones", icon: "🌍",
     items: [
-      { name: "Argentina",  flag: "🇦🇷", gradient: "linear-gradient(135deg,#74b9e7,#fff 50%,#74b9e7)" },
+      { name: "Argentina",  flag: "🇦🇷", gradient: "linear-gradient(135deg,#74b9e7,#fff 50%,#74b9e7)", 
+        photos: ["/images/Argentina/1.jpg", "/images/Argentina/2.jpg","/images/Argentina/3.jpg", "/images/Argentina/4.jpg", "/images/Argentina/5.jpg"] },
+      { name: "Portugal",   flag: "🇵🇹", gradient: "linear-gradient(135deg,#006600,#cc0000)", version: "Alternativa",
+        photos: ["/images/Portugal/1.jpg", "/images/Portugal/2.jpg","/images/Portugal/3.jpg", "/images/Portugal/4.jpg", "/images/Portugal/5.jpg"] },
       { name: "Brasil",     flag: "🇧🇷", gradient: "linear-gradient(135deg,#009c3b,#ffdf00)" },
       { name: "Francia",    flag: "🇫🇷", gradient: "linear-gradient(135deg,#002395,#fff 50%,#ed2939)" },
       { name: "España",     flag: "🇪🇸", gradient: "linear-gradient(135deg,#c60b1e,#ffc400 50%,#c60b1e)" },
       { name: "Alemania",   flag: "🇩🇪", gradient: "linear-gradient(135deg,#111,#d00 50%,#ffce00)" },
-      { name: "Inglaterra", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", gradient: "linear-gradient(135deg,#f0f0f0,#cf111a)" },
-      { name: "Portugal",   flag: "🇵🇹", gradient: "linear-gradient(135deg,#006600,#cc0000)" },
-      { name: "Italia",     flag: "🇮🇹", gradient: "linear-gradient(135deg,#003399,#009246)" },
-      { name: "México",     flag: "🇲🇽", gradient: "linear-gradient(135deg,#006847,#fff 50%,#ce1126)" },
-      { name: "Uruguay",    flag: "🇺🇾", gradient: "linear-gradient(135deg,#5aafd8,#fff)" },
-      { name: "Chile",      flag: "🇨🇱", gradient: "linear-gradient(135deg,#d52b1e,#fff 50%,#d52b1e)" },
-      { name: "Ecuador",    flag: "🇪🇨", gradient: "linear-gradient(135deg,#f7d800,#003893 60%,#cf0000)" },
-      { name: "Marruecos",  flag: "🇲🇦", gradient: "linear-gradient(135deg,#c1272d,#006233)" },
-      { name: "Japón",      flag: "🇯🇵", gradient: "linear-gradient(135deg,#003087,#fff)" },
-      { name: "USA",        flag: "🇺🇸", gradient: "linear-gradient(135deg,#3c3b6e,#b22234)" },
+      
     ],
   },
   {
@@ -80,7 +74,7 @@ export const ALL_CUSTOM = CUSTOM_CATEGORIES.flatMap((cat) =>
     version: "Local", // ← configurable por equipo
     price: null,
     badges: [{ label: "POR ENCARGO", color: "#003893" }],
-    desc: `Camiseta oficial ${item.name}. Pedido por encargo, 5–10 días hábiles. Precio y disponibilidad por WhatsApp.`,
-    photos: [],
+    desc: `Camiseta oficial ${item.name}. Pedido por encargo, 12–15 días hábiles. Precio y disponibilidad por WhatsApp.`,
+    photos: item.photos ?? [],
   }))
 );
