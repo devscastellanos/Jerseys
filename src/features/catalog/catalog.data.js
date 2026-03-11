@@ -65,3 +65,29 @@ export const COLOMBIA_PRODUCTS = [
     photos: ["/images/Colombia/Kid/1.jpg","/images/Colombia/Kid/2.jpg","/images/Colombia/Kid/3.jpg","/images/Colombia/Kid/4.jpg","/images/Colombia/Kid/5.jpg"],
   },
 ];
+export const DIFERENCIAS = [
+  {
+    q: "¿Cuál es la diferencia entre camiseta “Fans / Stadium” y camiseta “Jugador / Player / Match”?",
+    a: `La diferencia entre camiseta “Fans / Stadium” y camiseta “Jugador / Player / Match” es básicamente cómo está hecha y para qué uso.
+
+1) Fit (cómo queda puesta)
+Fans (Stadium / Replica): corte más “normal” y cómodo. No queda tan pegada.
+Jugador (Player / Match): corte entallado/ajustado, pensado para rendimiento y que “no te agarren” en juego.
+
+2) Tela y sensación
+Fans: tela más gruesita y resistente para uso diario.
+Jugador: tela más liviana, más respirable; se siente más “técnica”.
+
+3) Detalles y acabados
+Fans: logos y escudos suelen venir bordados o en parches más “durables”.
+Jugador: muchas veces vienen termopegados (heat-pressed) para pesar menos. Se ven brutales, pero son más delicados con lavadas si no las cuidas.
+
+4) Ventilación
+Fans: ventilación normal.
+Jugador: trae paneles, perforaciones o zonas extra de ventilación (depende del club/marca).
+
+5) Precio y durabilidad
+Fans: generalmente más barata y aguanta mejor el trajín.
+Jugador: más cara y requiere más cuidado (lavar al revés, agua fría, no secadora).`,
+  },
+];

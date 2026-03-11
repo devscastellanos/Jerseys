@@ -279,7 +279,7 @@ export default function HomePage({ navigate }) {
               [
                 "📦",
                 "Envío a todo Colombia",
-                "Despachos desde Bogotá y Medellín. Tracking incluido.",
+                "Despachos desde Bogotá. Tracking incluido.",
               ],
               [
                 "👕",

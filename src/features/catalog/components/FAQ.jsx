@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DIFERENCIAS } from "../catalog.data";
 
 const FAQS = [
   {
@@ -7,11 +8,11 @@ const FAQS = [
   },
   {
     q: "¿Cuánto demora el envío?",
-    a: "Envíos a todo Colombia en 2–5 días hábiles. Medellín y Bogotá en 24–48 horas. Envío gratis en pedidos mayores a $150.000.",
+    a: "Envíos a todo Colombia en 2–5 días hábiles. Bogotá en 24–48 horas. Envío gratis en pedidos mayores a $150.000.",
   },
   {
     q: "¿Cuál es la diferencia entre Jugador y Fan?",
-    a: "La versión Jugador es la misma que usa la selección en cancha: tela técnica, corte ajustado y acabados premium. La Fan es igual visualmente pero más cómoda para uso diario.",
+    a: DIFERENCIAS[0].a,
   },
   {
     q: "¿Cómo pago?",
@@ -62,6 +63,7 @@ export default function FAQ() {
                 color: "#555",
                 fontSize: "0.87rem",
                 lineHeight: 1.7,
+                whiteSpace: "pre-line",
               }}
             >
               {f.a}
