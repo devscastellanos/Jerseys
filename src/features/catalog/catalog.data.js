@@ -36,7 +36,7 @@ export const COLOMBIA_PRODUCTS = [
     version: "Local",
     emoji: "🌟",
     gradient: "linear-gradient(135deg,#f9d923,#e8b800)",
-    photos: ["/images/Colombia/WomenPlayer/5.jpg", "/images/Colombia/WomenPlayer/2.jpg", "/images/Colombia/WomenPlayer/3.jpg", "/images/Colombia/WomenPlayer/4.jpg"],
+    photos: ["/images/Colombia/WomenPlayer/5.jpg", "/images/Colombia/WomenPlayer/2.jpg", "/images/Colombia/WomenPlayer/3.jpg", "/images/Colombia/WomenPlayer/4.jpg", "/images/Colombia/WomenPlayer/6.jpg"],
   },
   {
     slug: "colombia-fan-mujer",
