@@ -4,7 +4,7 @@ import { DIFERENCIAS } from "../catalog.data";
 const FAQS = [
   {
     q: "¿Cómo son las tallas?",
-    a: "Las tallas son estándar Colombia. Si tienes dudas entre dos tallas, te recomendamos la más grande.",
+    a: "Las tallas son estándar Colombia. Las tallas de niño son en base a su edad.",
   },
   {
     q: "¿Cuánto demora el envío?",

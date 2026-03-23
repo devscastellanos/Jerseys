@@ -12,7 +12,8 @@ export const CUSTOM_CATEGORIES = [
       { name: "Brasil",     flag: "🇧🇷", gradient: "linear-gradient(135deg,#009c3b,#ffdf00)", price: "95000",
         photos: ["/images/Brasil/1.jpg", "/images/Brasil/2.jpg","/images/Brasil/3.jpg", "/images/Brasil/4.jpg", "/images/Brasil/5.jpg"]
        },
-      { name: "Colombia Visitante",    flag: "🇫🇷", gradient: "linear-gradient(135deg,#002395,#fff 50%,#ed2939)", price: "95000", version: "Visitante",
+      { slug: "ColombiaVisitante",
+        name: "Colombia Visitante",    flag: "🇫🇷", gradient: "linear-gradient(135deg,#002395,#fff 50%,#ed2939)", price: "95000", version: "Visitante",
         photos: ["/images/ColVisitante/1.jpg", "/images/ColVisitante/2.jpg","/images/ColVisitante/3.jpg", "/images/ColVisitante/4.jpg", "/images/ColVisitante/5.jpg", "/images/ColVisitante/6.jpg", "/images/ColVisitante/7.jpg"] },
       { name: "España",     flag: "🇪🇸", gradient: "linear-gradient(135deg,#c60b1e,#ffc400 50%,#c60b1e)", price: "95000",
         photos: ["/images/España/1.jpg", "/images/España/2.jpg","/images/España/3.jpg", "/images/España/4.jpg", "/images/España/5.jpg"] },
@@ -66,7 +67,7 @@ export const CUSTOM_CATEGORIES = [
 export const ALL_CUSTOM = CUSTOM_CATEGORIES.flatMap((cat) =>
   cat.items.map((item) => ({
     ...item,
-    slug: "encargo-" + slugify(item.name),
+    slug: item.slug ?? "encargo-" + slugify(item.name),
     category: cat.label,
     categoryId: cat.id,
     isCustom: true,

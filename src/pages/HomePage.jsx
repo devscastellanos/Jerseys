@@ -169,7 +169,7 @@ export default function HomePage({ navigate }) {
             }}
           >
             {[
-              ["5", "Modelos"],
+              ["+7", "Modelos"],
               ["1.1", "Calidad"],
               ["🚀", "Envío rápido"],
             ].map(([v, l]) => (

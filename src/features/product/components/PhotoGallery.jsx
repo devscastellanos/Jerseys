@@ -3,9 +3,36 @@ import JerseyArtBox from "../../../components/ui/JerseyArtBox";
 
 export default function PhotoGallery({ photos, gradient, emoji }) {
   const [active, setActive] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const hasPhotos = photos?.length > 0;
 
   useEffect(() => setActive(0), [photos]);
+
+  useEffect(() => {
+    if (!isModalOpen) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setIsModalOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isModalOpen]);
+
+  const prevPhoto = (event) => {
+    if (event) event.stopPropagation();
+    setActive((current) => (current - 1 + photos.length) % photos.length);
+  };
+
+  const nextPhoto = (event) => {
+    if (event) event.stopPropagation();
+    setActive((current) => (current + 1) % photos.length);
+  };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -24,19 +51,19 @@ export default function PhotoGallery({ photos, gradient, emoji }) {
             <img
               src={photos[active]}
               alt="camiseta"
+              onClick={() => setIsModalOpen(true)}
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
                 display: "block",
+                cursor: "zoom-in",
               }}
             />
             {photos.length > 1 && (
               <>
                 <button
-                  onClick={() =>
-                    setActive((active - 1 + photos.length) % photos.length)
-                  }
+                  onClick={prevPhoto}
                   style={{
                     position: "absolute",
                     left: 10,
@@ -56,7 +83,7 @@ export default function PhotoGallery({ photos, gradient, emoji }) {
                   ‹
                 </button>
                 <button
-                  onClick={() => setActive((active + 1) % photos.length)}
+                  onClick={nextPhoto}
                   style={{
                     position: "absolute",
                     right: 10,
@@ -151,6 +178,102 @@ export default function PhotoGallery({ photos, gradient, emoji }) {
               />
             </div>
           ))}
+        </div>
+      )}
+
+      {hasPhotos && isModalOpen && (
+        <div
+          onClick={() => setIsModalOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 1200,
+            background: "rgba(0,0,0,0.85)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "clamp(12px,3vw,28px)",
+          }}
+        >
+          <button
+            onClick={() => setIsModalOpen(false)}
+            style={{
+              position: "absolute",
+              top: 14,
+              right: 14,
+              width: 42,
+              height: 42,
+              borderRadius: "50%",
+              border: "none",
+              background: "rgba(255,255,255,0.92)",
+              fontSize: "1.3rem",
+              fontWeight: 800,
+              cursor: "pointer",
+            }}
+            aria-label="Cerrar modal"
+          >
+            ×
+          </button>
+
+          <img
+            src={photos[active]}
+            alt="camiseta ampliada"
+            onClick={(event) => event.stopPropagation()}
+            style={{
+              maxWidth: "min(95vw, 980px)",
+              maxHeight: "88vh",
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+              borderRadius: 14,
+              boxShadow: "0 18px 48px rgba(0,0,0,0.45)",
+            }}
+          />
+
+          {photos.length > 1 && (
+            <>
+              <button
+                onClick={prevPhoto}
+                style={{
+                  position: "absolute",
+                  left: 14,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "rgba(255,255,255,0.92)",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: 44,
+                  height: 44,
+                  cursor: "pointer",
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                }}
+                aria-label="Foto anterior"
+              >
+                ‹
+              </button>
+              <button
+                onClick={nextPhoto}
+                style={{
+                  position: "absolute",
+                  right: 14,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "rgba(255,255,255,0.92)",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: 44,
+                  height: 44,
+                  cursor: "pointer",
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                }}
+                aria-label="Foto siguiente"
+              >
+                ›
+              </button>
+            </>
+          )}
         </div>
       )}
     </div>
