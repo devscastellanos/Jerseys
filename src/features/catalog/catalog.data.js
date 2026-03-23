@@ -1,6 +1,6 @@
 export const COLOMBIA_PRODUCTS = [
   {
-    slug: "colombia-jugador-hombre",
+    slug: "ColombiaMenPlayer",
     name: "Colombia — Jugador Hombre",
     type: "jugador", gender: "hombre",
     price: 95000,
@@ -13,7 +13,7 @@ export const COLOMBIA_PRODUCTS = [
     photos: ["/images/Colombia/MenPlayer/1.jpeg", "/images/Colombia/MenPlayer/2.jpg", "/images/Colombia/MenPlayer/3.jpg", "/images/Colombia/MenPlayer/4.jpg", "/images/Colombia/MenPlayer/5.jpeg"], 
   },
   {
-    slug: "colombia-fan-hombre",
+    slug: "ColombiaMenFan",
     name: "Colombia — Fan Hombre",
     type: "fan", gender: "hombre",
     price: 75000,
@@ -26,7 +26,7 @@ export const COLOMBIA_PRODUCTS = [
     photos: ["images/Colombia/MenFan/1.jpeg", "images/Colombia/MenFan/2.jpg", "images/Colombia/MenFan/3.jpg", "images/Colombia/MenFan/4.jpg", "images/Colombia/MenFan/5.jpg"],
   },
   {
-    slug: "colombia-jugador-mujer",
+    slug: "ColombiaWomenPlayer",
     name: "Colombia — Jugador Mujer",
     type: "jugador", gender: "mujer",
     price: 95000,
@@ -39,7 +39,7 @@ export const COLOMBIA_PRODUCTS = [
     photos: ["/images/Colombia/WomenPlayer/5.jpg", "/images/Colombia/WomenPlayer/2.jpg", "/images/Colombia/WomenPlayer/3.jpg", "/images/Colombia/WomenPlayer/4.jpg", "/images/Colombia/WomenPlayer/6.jpg"],
   },
   {
-    slug: "colombia-fan-mujer",
+    slug: "ColombiaWomenFan",
     name: "Colombia — Fan Mujer",
     type: "fan", gender: "mujer",
     price: 75000,
@@ -52,7 +52,7 @@ export const COLOMBIA_PRODUCTS = [
     photos: ["images/Colombia/WomenFan/1.jpg", "images/Colombia/WomenFan/2.jpg", "images/Colombia/WomenFan/3.jpg", "images/Colombia/WomenFan/4.jpg","images/Colombia/WomenFan/5.jpg"],
   },
   {
-    slug: "colombia-nino",
+    slug: "ColombiaKid",
     name: "Colombia — Niño (Encargo)",
     type: "fan", gender: "nino",
     price: 95000,
@@ -64,6 +64,31 @@ export const COLOMBIA_PRODUCTS = [
     gradient: "linear-gradient(135deg,#f9d923,#003893)",
     photos: ["/images/Colombia/Kid/1.jpg","/images/Colombia/Kid/2.jpg","/images/Colombia/Kid/3.jpg","/images/Colombia/Kid/4.jpg","/images/Colombia/Kid/5.jpg"],
   },
+   {
+    slug: "ColombiaTraining",
+    name: "Colombia — Entrenamiento (Encargo)",
+    type: "player", gender: "hombre",
+    price: 90000,
+    badges: [{ label: "ENTRENAMIENTO", color: "#16cbf9" }, { label: "HOMBRE", color: "#1a1a1a" }],
+    desc: "Camiseta de entrenamiento oficial de la Selección Colombia. Perfecta para entrenar o para un look casual con estilo futbolero.",
+    sizes: ["S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+    version: "-",
+    emoji: "⚽",
+    gradient: "linear-gradient(135deg,#f9d923,#003893)",
+    photos: ["/images/Colombia/WhiteTraining/1.jpg","/images/Colombia/WhiteTraining/2.jpg","/images/Colombia/WhiteTraining/3.jpg"],
+  },
+    { 
+    slug: "ColombiaPresentation",
+    name: "Colombia Presentacion (Encargo)",
+    type: "player", gender: "hombre",
+    price: 98000,
+    badges: [{ label: "PRESENTACIÓN", color: "#5a16f9" }, { label: "HOMBRE", color: "#1a1a1a" }],
+    desc: "Camiseta de presentación oficial de la Selección Colombia. Usada en eventos y presentaciones, con un diseño elegante y detalles exclusivos.",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    version: "-",
+    emoji: "⚽",
+    gradient: "linear-gradient(135deg,#f9d923,#003893)",
+    photos: ["/images/Colombia/Presentacion/1.jpg", "/images/Colombia/Presentacion/2.jpg","/images/Colombia/Presentacion/3.jpg", "/images/Colombia/Presentacion/4.jpg", "/images/Colombia/Presentacion/5.jpg"] },
 ];
 export const DIFERENCIAS = [
   {

@@ -5,8 +5,6 @@ export const CUSTOM_CATEGORIES = [
   {
     id: "selecciones", label: "Selecciones", icon: "🌍",
     items: [
-      { name: "Colombia Presentacion",     flag: "CO", gradient: "linear-gradient(135deg,#009c3b,#ffdf00)", price: "98000",
-        photos: ["/images/Colombia/Presentacion/1.jpg", "/images/Colombia/Presentacion/2.jpg","/images/Colombia/Presentacion/3.jpg", "/images/Colombia/Presentacion/4.jpg", "/images/Colombia/Presentacion/5.jpg"] },
       { name: "Argentina",  flag: "🇦🇷", gradient: "linear-gradient(135deg,#74b9e7,#fff 50%,#74b9e7)", price: "95000",
         photos: ["/images/Argentina/1.jpg", "/images/Argentina/2.jpg","/images/Argentina/3.jpg", "/images/Argentina/4.jpg", "/images/Argentina/5.jpg", "/images/Argentina/6.jpg"] },
       { name: "Portugal",version: "Alternativa",   flag: "🇵🇹", gradient: "linear-gradient(135deg,#006600,#cc0000)", price: "95000",
